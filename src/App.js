@@ -4,8 +4,8 @@ const App = () => {
   return (
     <div>
       <h3>testttt</h3>
-      <p>XD</p>
-      <h1>xd</h1>
+      <p>jhuj</p>
+      <p>dupa</p>
     </div>
   );
 };
