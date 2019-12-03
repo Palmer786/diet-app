@@ -1,0 +1,16 @@
+nav {
+  background: rgb(99, 17, 192);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+}
+nav > h2 {
+  color: orange;
+}
+nav > h1:hover,
+h2:hover,
+h3:hover {
+  color: yellow;
+}
