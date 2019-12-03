@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 nav {
   background: rgb(99, 17, 192);
   color: white;
@@ -14,6 +19,7 @@ nav > h2:hover,
 nav > h3:hover {
   color: yellow;
 }
+
 .info{
     height: 20vh;
     color:black;
@@ -21,4 +27,42 @@ nav > h3:hover {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
+
+.diet {
+    min-height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.diet-info {
+    min-height: 20vh;
+    width: 25%;
+    background: blue;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+}
+
+.diet-info > button {
+    height: 10%;
+    border: none;
+    background: rgb(47, 47, 233);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.diet-info > button:hover {
+    background: rgb(74, 74, 250);
+}
+
+.diet-details {
+    background: yellow;
+    min-height: 90%;
+    width: 100%;
+    border-bottom: 2px solid black;
+    padding: 20px;
+    font-size: 26px;
 }
