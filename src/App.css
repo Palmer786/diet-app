@@ -20,6 +20,15 @@ nav > h3:hover {
   color: yellow;
 }
 
+.info{
+    height: 20vh;
+    color:black;
+    background:rgb(219, 203, 255);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+
 .diet {
     min-height: 50vh;
     width: 100%;
