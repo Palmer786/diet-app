@@ -1,9 +1,14 @@
 import React from "react";
+import { BreakfastProvider } from "./components/DietContext";
+import UserInfo from "./components/UserInfo";
+import "./App.css";
 
 const App = () => {
   return (
     <div>
-      <h3>App</h3>
+      <BreakfastProvider>
+        <UserInfo />
+      </BreakfastProvider>
     </div>
   );
 };
