@@ -10,7 +10,7 @@ nav > h2 {
   color: orange;
 }
 nav > h1:hover,
-h2:hover,
-h3:hover {
+nav > h2:hover,
+nav > h3:hover {
   color: yellow;
 }
