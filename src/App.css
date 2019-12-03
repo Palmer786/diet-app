@@ -10,7 +10,15 @@ nav > h2 {
   color: orange;
 }
 nav > h1:hover,
-h2:hover,
-h3:hover {
+nav > h2:hover,
+nav > h3:hover {
   color: yellow;
+}
+.info{
+    height: 20vh;
+    color:black;
+    background:rgb(219, 203, 255);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
