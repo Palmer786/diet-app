@@ -5,8 +5,8 @@ import PersonalCal from "./PersonalCal";
 
 const UserInfo = () => {
 
-  if (JSON.parse(localStorage.getItem("personal-data")) === null) return <PersonalInfo />;
-  else if (JSON.parse(localStorage.getItem("personal-data")) !== null) return <PersonalCal />;
+  if (localStorage.getItem("personal-data") === "{}" || !localStorage.getItem("personal-data")) return <PersonalInfo />;
+  else return <PersonalCal />;
 };
 
 export default UserInfo;

@@ -28,7 +28,7 @@ const PersonalInfo = () => {
     setCalories(e.target.value);
   };
   const sendData = e => {
-    setInfos({ height, weight, age, gender, calories });
+    setInfos({ height, weight, age, gender, calories, fat: calories - 50 });
     
   };
   useEffect(() => {
