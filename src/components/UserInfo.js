@@ -1,13 +1,12 @@
 import React, { useContext } from "react";
 import { DietContext } from "./DietContext";
+import PersonalInfo from "./PersonalInfo";
+import PersonalCal from "./PersonalCal";
 
 const UserInfo = () => {
-  const [breakfast, setBreakfast] = useContext(DietContext);
-  return (
-    <div>
-      <h3>{breakfast}</h3>
-    </div>
-  );
+
+  if (JSON.parse(localStorage.getItem("personal-data")) === null) return <PersonalInfo />;
+  else if (JSON.parse(localStorage.getItem("personal-data")) !== null) return <PersonalCal />;
 };
 
 export default UserInfo;

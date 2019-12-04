@@ -9,8 +9,6 @@ import Nav from "./components/Nav";
 import Diet from "./components/Diet";
 import About from "./components/About";
 import "./App.css";
-import PersonalInfo from "./components/PersonalInfo";
-import PersonalCal from "./components/PersonalCal";
 
 const App = () => {
   return (
@@ -23,7 +21,7 @@ const App = () => {
             exact
             render={() => (
               <React.Fragment>
-                <PersonalInfo />
+                <UserInfo/>
                 <Diet />
               </React.Fragment>
             )}
