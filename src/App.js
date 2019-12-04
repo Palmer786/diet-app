@@ -12,7 +12,7 @@ const App = () => {
     <div>
       <BreakfastProvider>
         <Nav />
-        <PersonalInfo />
+        <UserInfo/>
         <Diet />
       </BreakfastProvider>
     </div>
