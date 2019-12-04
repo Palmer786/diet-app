@@ -3,7 +3,7 @@ import React, { createContext, useState } from "react";
 export const DietContext = createContext();
 
 export const DietProvider = props => {
-  const [items, getItems] = useState([
+  const [items, setItems] = useState([
     {
       key: "breakfast",
       food: [
