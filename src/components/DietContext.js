@@ -2,10 +2,41 @@ import React, { createContext, useState } from "react";
 
 export const DietContext = createContext();
 
-export const BreakfastProvider = props => {
-  const [breakfast, setBreakfast] = useState("breakfast");
+export const DietProvider = props => {
+  const [items, getItems] = useState([
+    {
+      key: "breakfast",
+      food: [
+        {
+          id: 1,
+          name: "Carrot",
+          calories: 50
+        }
+      ]
+    },
+    {
+      key: "dinner",
+      food: [
+        {
+          id: 5,
+          name: "Bread",
+          calories: 120
+        }
+      ]
+    },
+    {
+      key: "food",
+      food: [
+        {
+          id: 12,
+          name: "egg",
+          calories: 50
+        }
+      ]
+    }
+  ]);
   return (
-    <DietContext.Provider value={[breakfast, setBreakfast]}>
+    <DietContext.Provider value={[items, setItems]}>
       {props.children}
     </DietContext.Provider>
   );
