@@ -25,10 +25,10 @@ const PersonalInfo = () => {
   const updateCalories = e => {
     setCalories(e.target.value);
   };
-  
-  function percentage(num, per) {
+
+  const percentage = (num, per) => {
     return (num / 100) * per;
-  }
+  };
   const sendData = e => {
     if (
       height === "" ||
