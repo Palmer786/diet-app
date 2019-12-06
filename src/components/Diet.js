@@ -10,7 +10,7 @@ const Diet = () => {
     <div className="diet">
       <div className="diet-info">
         <div className="diet-details">
-          <h3>Kalories: 500/2000</h3>
+          <h3>Calories: 500/2000</h3>
           <h3>Fat: 15/40</h3>
           <h3>Protein: 35/80</h3>
           <h3>Carbohydrates: 60/220</h3>
@@ -23,7 +23,7 @@ const Diet = () => {
       </div>
       <div className="diet-info">
         <div className="diet-details">
-          <h3>Kalories: 500/2000</h3>
+          <h3>Calories: 500/2000</h3>
           <h3>Fat: 15/40</h3>
           <h3>Protein: 35/80</h3>
           <h3>Carbohydrates: 60/220</h3>
@@ -36,7 +36,7 @@ const Diet = () => {
       </div>
       <div className="diet-info">
         <div className="diet-details">
-          <h3>Kalories: 500/2000</h3>
+          <h3>Calories: 500/2000</h3>
           <h3>Fat: 15/40</h3>
           <h3>Protein: 35/80</h3>
           <h3>Carbohydrates: 60/220</h3>
