@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const PersonalInfo = () => {
   const [infos, setInfos] = useState(
@@ -9,8 +9,6 @@ const PersonalInfo = () => {
   const [age, setAge] = useState("");
   const [gender, setGender] = useState("");
   const [calories, setCalories] = useState("");
-
-  
 
   const updateHeight = e => {
     setHeight(e.target.value);
@@ -27,9 +25,32 @@ const PersonalInfo = () => {
   const updateCalories = e => {
     setCalories(e.target.value);
   };
+  
+  function percentage(num, per) {
+    return (num / 100) * per;
+  }
   const sendData = e => {
-    setInfos({ height, weight, age, gender, calories, fat: calories - 50 });
-    
+    if (
+      height === "" ||
+      weight === "" ||
+      age === "" ||
+      gender === "" ||
+      calories === ""
+    ) {
+      alert("Pola nie moga byc puste");
+      e.preventDefault();
+    } else {
+      setInfos({
+        height,
+        weight,
+        age,
+        gender,
+        calories,
+        fat: Math.round(percentage(calories, 30) / 9),
+        protein: Math.round(percentage(calories, 15) / 4),
+        carbohydrates: Math.round(percentage(calories, 55) / 4)
+      });
+    }
   };
   useEffect(() => {
     localStorage.setItem("personal-data", JSON.stringify(infos));

@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import { DietContext } from "./DietContext";
+import React from "react";
 import PersonalInfo from "./PersonalInfo";
 import PersonalCal from "./PersonalCal";
 
