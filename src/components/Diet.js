@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { DietContext } from "./DietContext";
 
 const Diet = () => {
   const navLinks = {
     textDecoration: "none",
     color: "white"
   };
+  const [items, setItems] = useContext(DietContext);
+  let breakfastCal = 0;
+  let dinnerCal = 0;
+  let supperCal = 0;
   return (
     <div className="diet">
       <div className="diet-info">
         <div className="diet-details">
-          <h3>Kalories: 500/2000</h3>
-          <h3>Fat: 15/40</h3>
-          <h3>Protein: 35/80</h3>
-          <h3>Carbohydrates: 60/220</h3>
+          {items[0].food.map(item => {
+            breakfastCal += item.calories;
+          })}
+          <h3>Calories: {breakfastCal}</h3>
         </div>
         <button>
           <Link to="/breakfast" style={navLinks}>
@@ -23,10 +28,10 @@ const Diet = () => {
       </div>
       <div className="diet-info">
         <div className="diet-details">
-          <h3>Kalories: 500/2000</h3>
-          <h3>Fat: 15/40</h3>
-          <h3>Protein: 35/80</h3>
-          <h3>Carbohydrates: 60/220</h3>
+          {items[1].food.map(item => {
+            dinnerCal += item.calories;
+          })}
+          <h3>Calories: {dinnerCal}</h3>
         </div>
         <button>
           <Link to="/dinner" style={navLinks}>
@@ -36,10 +41,10 @@ const Diet = () => {
       </div>
       <div className="diet-info">
         <div className="diet-details">
-          <h3>Kalories: 500/2000</h3>
-          <h3>Fat: 15/40</h3>
-          <h3>Protein: 35/80</h3>
-          <h3>Carbohydrates: 60/220</h3>
+          {items[2].food.map(item => {
+            supperCal += item.calories;
+          })}
+          <h3>Calories: {supperCal}</h3>
         </div>
         <button>
           <Link to="/supper" style={navLinks}>
