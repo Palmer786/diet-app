@@ -27,9 +27,18 @@ const Breakfast = () => {
   };
   const addItem = e => {
     e.preventDefault();
-    setItems([...items], items[0].food[(items[0].food.length)] = { name, calories: cal, proteins: pro, fat, carbohydrates: carbo })
+    setItems(
+      [...items],
+      (items[0].food[items[0].food.length] = {
+        name,
+        calories: cal,
+        proteins: pro,
+        fat,
+        carbohydrates: carbo
+      })
+    );
   };
-return (
+  return (
     <div className="main">
       <h1>BREAKFAST</h1>
       <div className="search">
@@ -58,10 +67,13 @@ return (
               <h3>{item.name}</h3>
             </div>
             <div className="product-details">
-            <p>Calories: {item.calories}</p>
-            <p>Proteins: {item.proteins}</p>
-            <p>Fat: {item.fat}</p>
-            <p>Carbohydrates: {item.carbohydrates}</p>
+              <p>Calories: {item.calories}</p>
+              <p>Proteins: {item.proteins}</p>
+              <p>Fat: {item.fat}</p>
+              <p>Carbohydrates: {item.carbohydrates}</p>
+            </div>
+            <div className="product-delete">
+              <button>Delete</button>
             </div>
           </div>
         ))}
