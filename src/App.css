@@ -117,4 +117,23 @@ flex-wrap: wrap;
 .product-details{
     padding-top:10%;
     padding-left:10%;
+    height: 70%;
+}
+
+.product-delete {
+    height: 10%;
+    display:flex; 
+}
+
+.product-delete > button {
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    background: rgb(235, 14, 14);
+}
+.product-delete > button:hover {
+    background: rgb(255, 0, 0);
 }

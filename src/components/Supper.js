@@ -71,6 +71,9 @@ const Supper = () => {
             <p>Fat: {item.fat}</p>
             <p>Carbohydrates: {item.carbohydrates}</p>
             </div>
+            <div className="product-delete">
+              <button>Delete</button>
+            </div>
           </div>
         ))}
       </div>
