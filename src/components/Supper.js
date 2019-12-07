@@ -1,25 +1,59 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { DietContext } from "./DietContext";
 
 const Supper = () => {
   const [items, setItems] = useContext(DietContext);
+  const [name, setName] = useState("");
+  const [cal, setCal] = useState("");
+  const [pro, setPro] = useState("");
+  const [fat, setFat] = useState("");
+  const [carbo, setCarbo] = useState("");
+
+  const updateName = e => {
+    setName(e.target.value);
+  };
+  const updateCal = e => {
+    setCal(+e.target.value);
+  };
+  const updatePro = e => {
+    setPro(+e.target.value);
+  };
+  const updateFat = e => {
+    setFat(+e.target.value);
+  };
+  const updateCarbo = e => {
+    setCarbo(+e.target.value);
+  };
+  const addItem = e => {
+    e.preventDefault();
+    setItems([...items], items[2].food[(items[2].food.length)] = { name, calories: cal, proteins: pro, fat, carbohydrates: carbo })
+  };
   return (
     <div className="main">
-        <h1>SUPPER</h1>
+              <h1>SUPPER</h1>
       <div className="search">
 
         <input type="text" className="search-bar" />
         <button className="search-button">Search</button>
       </div>
-      <div className="myList">
+      <form onSubmit={addItem} className="myList">
+        Name:
+        <input type="text" name="name" value={name} onChange={updateName} />
+        Cal: <input type="number" name="cal" value={cal} onChange={updateCal} />
+        Pro: <input type="number" name="pro" value={pro} onChange={updatePro} />
+        Fat: <input type="number" name="fat" value={fat} onChange={updateFat} />
+        Carbo:
+        <input type="number" name="carbo" value={carbo} onChange={updateCarbo} />
+        <button>Add</button>
+      </form>
+      <div className="product-details">>
         {items[2].food.map(item => (
-          <div className="product" key={item.id}>
-            <div className="product-name">
-              <h3>{item.name}</h3>
-            </div>
-            <div className="product-details">
-              <p>Calories: {item.calories}</p>
-            </div>
+          <div key={item.id}>
+            <h3>{item.name}</h3>
+            <p>Calories: {item.calories}</p>
+            <p>Proteins: {item.proteins}</p>
+            <p>Fat: {item.fat}</p>
+            <p>Carbohydrates: {item.carbohydrates}</p>
           </div>
         ))}
       </div>

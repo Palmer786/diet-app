@@ -9,20 +9,29 @@ const SupperSum = () => {
   };
   const [items, setItems] = useContext(DietContext);
   let supperCal = 0;
+  let supperCarbo = 0;
+  let supperFat = 0;
+  let supperPro = 0;
   return (
-      <div className="diet-info">
-        <div className="diet-details">
-          {items[2].food.map(item => {
-            supperCal += item.calories;
-          })}
-          <h3>Calories: {supperCal}</h3>
-        </div>
-        <button>
-          <Link to="/supper" style={navLinks}>
-            My supper
-          </Link>
-        </button>
+    <div className="diet-info">
+      <div className="diet-details">
+        {items[2].food.map(item => {
+          supperCal += item.calories;
+          supperPro += item.proteins;
+          supperFat += item.fat;
+          supperCarbo += item.carbohydrates;
+        })}
+        <h3>Calories: {supperCal}</h3>
+        <h3>Proteins: {supperPro}</h3>
+        <h3>Fat: {supperFat}</h3>
+        <h3>Carbohydrates: {supperCarbo}</h3>
       </div>
+      <button>
+        <Link to="/supper" style={navLinks}>
+          My supper
+        </Link>
+      </button>
+    </div>
   );
 };
 

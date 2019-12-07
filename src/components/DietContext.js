@@ -11,12 +11,18 @@ export const DietProvider = props => {
           {
             id: 1,
             name: "chleb",
-            calories: 50
+            calories: 50,
+            proteins: 5,
+            fat: 1,
+            carbohydrates: 60
           },
           {
             id: 2,
             name: "jajko",
-            calories: 60
+            calories: 50,
+            proteins: 5,
+            fat: 1,
+            carbohydrates: 60      
           }
         ]
       },
@@ -26,12 +32,18 @@ export const DietProvider = props => {
           {
             id: 5,
             name: "pomidor",
-            calories: 120
+            calories: 50,
+            proteins: 5,
+            fat: 1,
+            carbohydrates: 60
           },
           {
             id: 22,
             name: "orzech",
-            calories: 30
+            calories: 50,
+            proteins: 5,
+            fat: 1,
+            carbohydrates: 60
           }
         ]
       },
@@ -41,12 +53,18 @@ export const DietProvider = props => {
           {
             id: 125,
             name: "ser",
-            calories: 75
+            calories: 50,
+            proteins: 5,
+            fat: 1,
+            carbohydrates: 60
           },
           {
             id: 286,
             name: "masło",
-            calories: 320
+            calories: 50,
+            proteins: 5,
+            fat: 1,
+            carbohydrates: 60
           }
         ]
       }
