@@ -26,13 +26,21 @@ const Supper = () => {
   };
   const addItem = e => {
     e.preventDefault();
-    setItems([...items], items[2].food[(items[2].food.length)] = { name, calories: cal, proteins: pro, fat, carbohydrates: carbo })
+    setItems(
+      [...items],
+      (items[2].food[items[2].food.length] = {
+        name,
+        calories: cal,
+        proteins: pro,
+        fat,
+        carbohydrates: carbo
+      })
+    );
   };
   return (
     <div className="main">
-              <h1>SUPPER</h1>
+      <h1>SUPPER</h1>
       <div className="search">
-
         <input type="text" className="search-bar" />
         <button className="search-button">Search</button>
       </div>
@@ -43,17 +51,26 @@ const Supper = () => {
         Pro: <input type="number" name="pro" value={pro} onChange={updatePro} />
         Fat: <input type="number" name="fat" value={fat} onChange={updateFat} />
         Carbo:
-        <input type="number" name="carbo" value={carbo} onChange={updateCarbo} />
+        <input
+          type="number"
+          name="carbo"
+          value={carbo}
+          onChange={updateCarbo}
+        />
         <button>Add</button>
       </form>
-      <div className="product-details">>
+      <div className="myList">
         {items[2].food.map(item => (
-          <div key={item.id}>
-            <h3>{item.name}</h3>
+          <div className="product" key={item.id}>
+            <div className="product-name">
+              <h3>{item.name}</h3>
+            </div>
+            <div className="product-details">
             <p>Calories: {item.calories}</p>
             <p>Proteins: {item.proteins}</p>
             <p>Fat: {item.fat}</p>
             <p>Carbohydrates: {item.carbohydrates}</p>
+            </div>
           </div>
         ))}
       </div>

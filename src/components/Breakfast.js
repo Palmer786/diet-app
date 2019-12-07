@@ -29,11 +29,10 @@ const Breakfast = () => {
     e.preventDefault();
     setItems([...items], items[0].food[(items[0].food.length)] = { name, calories: cal, proteins: pro, fat, carbohydrates: carbo })
   };
-  return (
+return (
     <div className="main">
-              <h1>BREAKFAST</h1>
+      <h1>BREAKFAST</h1>
       <div className="search">
-
         <input type="text" className="search-bar" />
         <button className="search-button">Search</button>
       </div>
@@ -44,17 +43,26 @@ const Breakfast = () => {
         Pro: <input type="number" name="pro" value={pro} onChange={updatePro} />
         Fat: <input type="number" name="fat" value={fat} onChange={updateFat} />
         Carbo:
-        <input type="number" name="carbo" value={carbo} onChange={updateCarbo} />
+        <input
+          type="number"
+          name="carbo"
+          value={carbo}
+          onChange={updateCarbo}
+        />
         <button>Add</button>
       </form>
-      <div className="product-details">>
+      <div className="myList">
         {items[0].food.map(item => (
-          <div key={item.id}>
-            <h3>{item.name}</h3>
+          <div className="product" key={item.id}>
+            <div className="product-name">
+              <h3>{item.name}</h3>
+            </div>
+            <div className="product-details">
             <p>Calories: {item.calories}</p>
             <p>Proteins: {item.proteins}</p>
             <p>Fat: {item.fat}</p>
             <p>Carbohydrates: {item.carbohydrates}</p>
+            </div>
           </div>
         ))}
       </div>
