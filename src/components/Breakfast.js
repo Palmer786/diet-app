@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { DietContext } from "./DietContext";
+import "../App.css";
 
 const Breakfast = () => {
   const [items, setItems] = useContext(DietContext);
@@ -29,9 +30,14 @@ const Breakfast = () => {
     setItems([...items], items[0].food[(items[0].food.length)] = { name, calories: cal, proteins: pro, fat, carbohydrates: carbo })
   };
   return (
-    <div>
-      <h1>Breakfast</h1>
-      <form onSubmit={addItem}>
+    <div className="main">
+              <h1>BREAKFAST</h1>
+      <div className="search">
+
+        <input type="text" className="search-bar" />
+        <button className="search-button">Search</button>
+      </div>
+      <form onSubmit={addItem} className="myList">
         Name:
         <input type="text" name="name" value={name} onChange={updateName} />
         Cal: <input type="number" name="cal" value={cal} onChange={updateCal} />
@@ -41,7 +47,7 @@ const Breakfast = () => {
         <input type="number" name="carbo" value={carbo} onChange={updateCarbo} />
         <button>Add</button>
       </form>
-      <div>
+      <div className="product-details">>
         {items[0].food.map(item => (
           <div key={item.id}>
             <h3>{item.name}</h3>

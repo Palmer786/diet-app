@@ -29,9 +29,14 @@ const Supper = () => {
     setItems([...items], items[2].food[(items[2].food.length)] = { name, calories: cal, proteins: pro, fat, carbohydrates: carbo })
   };
   return (
-    <div>
-      <h1>Supper</h1>
-      <form onSubmit={addItem}>
+    <div className="main">
+              <h1>SUPPER</h1>
+      <div className="search">
+
+        <input type="text" className="search-bar" />
+        <button className="search-button">Search</button>
+      </div>
+      <form onSubmit={addItem} className="myList">
         Name:
         <input type="text" name="name" value={name} onChange={updateName} />
         Cal: <input type="number" name="cal" value={cal} onChange={updateCal} />
@@ -41,7 +46,7 @@ const Supper = () => {
         <input type="number" name="carbo" value={carbo} onChange={updateCarbo} />
         <button>Add</button>
       </form>
-      <div>
+      <div className="product-details">>
         {items[2].food.map(item => (
           <div key={item.id}>
             <h3>{item.name}</h3>
