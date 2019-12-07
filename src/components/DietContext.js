@@ -1,7 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 
 export const DietContext = createContext();
-
 export const DietProvider = props => {
   const [items, setItems] = useState(
     JSON.parse(localStorage.getItem("my-diet")) || [
@@ -66,6 +65,7 @@ export const DietProvider = props => {
             fat: 1,
             carbohydrates: 60
           }
+          
         ]
       }
     ]
