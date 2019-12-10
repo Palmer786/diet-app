@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
-
-const PersonalInfo = () => {
+const UserData = () => {
   const [infos, setInfos] = useState(
     JSON.parse(localStorage.getItem("personal-data")) || {}
   );
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
   const [age, setAge] = useState("");
-  const [gender, setGender] = useState("");
   const [calories, setCalories] = useState("");
-
+  const [gender, setGender] = useState("");
   const updateHeight = e => {
     setHeight(e.target.value);
   };
@@ -19,11 +17,11 @@ const PersonalInfo = () => {
   const updateAge = e => {
     setAge(e.target.value);
   };
-  const updateGender = e => {
-    setGender(e.target.value);
-  };
   const updateCalories = e => {
     setCalories(e.target.value);
+  };
+  const updateGender = e => {
+    setGender(e.target.value);
   };
 
   const percentage = (num, per) => {
@@ -77,18 +75,17 @@ const PersonalInfo = () => {
       </label>
       <label>
         <h3>Age</h3>
-        <input type="number" name="age" value={age} onChange={updateAge} />
+        <input type="text" name="age" value={age} onChange={updateAge} />
       </label>
       <label>
         <h3>Calories</h3>
         <input
-          type="number"
+          type="text"
           name="calories"
           value={calories}
           onChange={updateCalories}
         />
       </label>
-
       <label>
         <h3>Gender</h3>
         <input
@@ -111,4 +108,4 @@ const PersonalInfo = () => {
   );
 };
 
-export default PersonalInfo;
+export default UserData;
