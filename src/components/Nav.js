@@ -10,7 +10,7 @@ const Nav = () => {
     <nav>
       <h1>LOGO</h1>
       <Link to="/" style={navLinks}>
-        <h3>Diet</h3>
+        <h3>Meals</h3>
       </Link>
       <Link to="/about" style={navLinks}>
         <h3>About</h3>
