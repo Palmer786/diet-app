@@ -1,12 +1,10 @@
 import React from "react";
-import Diet from "./Diet";
-import Userinfo from "./UserInfo";
+import Userinfo from "./userInfoComponents/UserInfo";
 
 const Homepage = () => {
   return (
     <div>
       <Userinfo />
-      <Diet />
     </div>
   );
 };

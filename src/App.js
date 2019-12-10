@@ -1,5 +1,4 @@
 import React from "react";
-import { DietProvider } from "./components/DietContext";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Breakfast from "./components/Breakfast";
 import Dinner from "./components/Dinner";
@@ -13,7 +12,6 @@ const App = () => {
   return (
     <div>
       <Router>
-        <DietProvider>
           <Nav />
           <Route
             path="/"
@@ -24,7 +22,6 @@ const App = () => {
           <Route path="/breakfast" component={Breakfast} />
           <Route path="/dinner" component={Dinner} />
           <Route path="/supper" component={Supper} />
-        </DietProvider>
       </Router>
     </div>
   );
