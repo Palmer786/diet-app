@@ -40,6 +40,11 @@ const Meal = ({ title, setMealKeys }) => {
 
   return (
     <div className="diet-info">
+      <button>
+        <Link to={"/meals/" + `${title}`} style={navLinks}>
+          My {title}
+        </Link>
+      </button>
       <div className="diet-details">
         {items.food.map(item => {
           totalCalories += item.calories;
@@ -52,14 +57,10 @@ const Meal = ({ title, setMealKeys }) => {
         <h3>Fats: {totalFats}</h3>
         <h3>Carbohydrates: {totalCarbohydrates}</h3>
       </div>
-      <div>
+      <div className="product-delete">
         <DelMealKey title={title} setMealKeys={setMealKeys} />
       </div>
-      <button>
-        <Link to={"/meals/" + `${title}`} style={navLinks}>
-          My {title}
-        </Link>
-      </button>
+      
     </div>
   );
 };

@@ -23,7 +23,9 @@ const MyDiet = () => {
           </div>
         ))}
       </div>
+      <div className="addMeal">
       <AddMealKeys setMealKeys={setMealKeys} />
+      </div>
     </div>
   );
 };
