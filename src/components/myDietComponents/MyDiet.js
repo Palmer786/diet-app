@@ -19,7 +19,7 @@ const MyDiet = () => {
       <div className="diet">
         {mealKeys.map(key => (
           <div>
-            <Meal title={key} />
+            <Meal title={key} setMealKeys={setMealKeys} />
           </div>
         ))}
       </div>
