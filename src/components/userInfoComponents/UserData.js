@@ -44,7 +44,7 @@ const UserData = () => {
         age,
         gender,
         calories,
-        fat: Math.round(percentage(calories, 30) / 9),
+        fats: Math.round(percentage(calories, 30) / 9),
         protein: Math.round(percentage(calories, 15) / 4),
         carbohydrates: Math.round(percentage(calories, 55) / 4)
       });
