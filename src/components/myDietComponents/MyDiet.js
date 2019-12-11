@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Meal from "./Meal";
 import AddMealKeys from "./AddMealKey";
 
@@ -13,6 +13,7 @@ const MyDiet = () => {
   useEffect(() => {
     localStorage.setItem("mealKeys", JSON.stringify(mealKeys));
   }, [mealKeys]);
+
   return (
     <div>
       <div className="diet">
