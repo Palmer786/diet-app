@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import DelProduct from "./DelProduct";
+import AddProduct from "./AddProduct";
 
 const MealDetails = ({ match }) => {
   const [items, setItems] = useState(
@@ -14,6 +15,11 @@ const MealDetails = ({ match }) => {
   return (
     <div className="main">
       <h1>{items.key}</h1>
+      <div className="search">
+        <input type="text" className="search-bar" />
+        <button className="search-button">Search</button>
+      </div>
+      <AddProduct setItems={setItems} title={match.params.title} />
       <div className="myList">
         {items.food.map(item => (
           <div className="product" key={item.id}>
