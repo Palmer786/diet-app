@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import DelMealKey from "./DelMealKey";
 import { Link } from "react-router-dom";
 
-const Meal = ({ title }) => {
+const Meal = ({ title, setMealKeys }) => {
   const [items, setItems] = useState(
     JSON.parse(localStorage.getItem(`${title}`)) || {
       key: title,
@@ -50,6 +51,9 @@ const Meal = ({ title }) => {
         <h3>Proteins: {totalProteins}</h3>
         <h3>Fats: {totalFats}</h3>
         <h3>Carbohydrates: {totalCarbohydrates}</h3>
+      </div>
+      <div>
+        <DelMealKey title={title} setMealKeys={setMealKeys} />
       </div>
       <button>
         <Link to={"/meals/" + `${title}`} style={navLinks}>
