@@ -6,24 +6,7 @@ const Meal = ({ title, setMealKeys }) => {
   const [items, setItems] = useState(
     JSON.parse(localStorage.getItem(`${title}`)) || {
       key: title,
-      food: [
-        {
-          id: 3,
-          name: "mandarynka",
-          calories: 50,
-          proteins: 3,
-          fats: 5,
-          carbohydrates: 10
-        },
-        {
-          id: 5,
-          name: "banan",
-          calories: 120,
-          proteins: 3,
-          fats: 2,
-          carbohydrates: 30
-        }
-      ]
+      food: []
     }
   );
   useEffect(() => {
@@ -60,7 +43,6 @@ const Meal = ({ title, setMealKeys }) => {
       <div className="product-delete">
         <DelMealKey title={title} setMealKeys={setMealKeys} />
       </div>
-      
     </div>
   );
 };

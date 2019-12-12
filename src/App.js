@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import About from "./components/About";
 import MealDetails from "./components/myDietComponents/MealDetails";
 import Homepage from "./components/Homepage";
+import ProductDetail from "./components/myDietComponents/ProductDetails";
 import "./App.css";
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/" exact component={Homepage} />
         <Route path="/about" exact component={About} />
         <Route path="/meals/:title" exact component={MealDetails} />
+        <Route path="/meals/:title/:id" component={ProductDetail} />
       </Router>
     </div>
   );
